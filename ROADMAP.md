@@ -17,26 +17,28 @@ Rozwijalna aplikacja SaaS dla content creatorów w B2B/Industrial:
 
 ## 🤖 AI MODELS
 
-**Docelowy model:** `gemini-3.0-flash-preview`
+**Docelowy model:** `gemini-3-flash-preview`
 
-### Dlaczego Gemini 3.0?
-- Najnowsza wersja (2026)
-- Lepsza jakość generowania treści
+### Dlaczego Gemini 3?
+- Najnowsza wersja Flash (2026)
+- Lepsza jakość generowania treści niż 1.5
 - Szybkość: Flash = balance między jakością a ceną
 - Preview = early access do najnowszych features
 
 ### Inne modele (fallback):
-- `gemini-1.5-flash` - stabilny, szybki (jeśli 3.0 niedostępny)
+- `gemini-1.5-flash` - stabilny, szybki (jeśli 3 niedostępny)
 - `gemini-1.5-pro` - lepsza jakość, wolniejszy, droższy
 
 ### Konfiguracja:
 ```toml
 # .streamlit/secrets.toml
-GEMINI_MODEL = "gemini-3.0-flash-preview"
+GEMINI_MODEL = "gemini-3-flash-preview"
 GEMINI_API_KEY = "your-api-key"
 ```
 
-**WAŻNE:** Nie używaj `gemini-2.0-flash-exp` - jest eksperymentalny i często niedostępny.
+**WAŻNE:**
+- Nazwa modelu: `gemini-3-flash-preview` (BEZ kropki .0)
+- Nie używaj `gemini-2.0-flash-exp` - eksperymentalny i niedostępny
 
 ---
 
