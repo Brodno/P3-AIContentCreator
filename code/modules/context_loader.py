@@ -1,17 +1,26 @@
 """
 Context Loader - wczytuje pliki .md (ghost, persona, oferta, contentmachine)
+Obsługuje zarówno lokalne pliki jak i Google Drive (Streamlit Cloud)
 """
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
+# Import Google Drive loader (używa fallback jeśli nie działa)
+try:
+    from .google_drive_loader import get_loader
+    DRIVE_AVAILABLE = True
+except ImportError:
+    DRIVE_AVAILABLE = False
+    print("⚠️ Google Drive loader not available - using local files only")
+
 # Główny folder projektu (4 poziomy wyżej od code/modules/)
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
 
 def load_file(relative_path):
     """
-    Wczytaj plik .md z projektu.
+    Wczytaj plik .md z projektu (Google Drive lub lokalnie).
 
     Args:
         relative_path (str): Ścieżka relatywna (np. "_ZESPOL/ghost.md")
@@ -19,6 +28,17 @@ def load_file(relative_path):
     Returns:
         str: Zawartość pliku
     """
+    # Try Google Drive first (if available)
+    if DRIVE_AVAILABLE:
+        try:
+            loader = get_loader()
+            content = loader.read_file(relative_path)
+            print(f"✅ Wczytano z Drive: {relative_path} ({len(content)} znaków)")
+            return content
+        except Exception as e:
+            print(f"⚠️ Drive failed, trying local: {e}")
+
+    # Fallback to local files
     full_path = os.path.join(BASE_DIR, relative_path)
 
     if not os.path.exists(full_path):
@@ -27,7 +47,7 @@ def load_file(relative_path):
     with open(full_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    print(f"✅ Wczytano: {relative_path} ({len(content)} znaków)")
+    print(f"✅ Wczytano lokalnie: {relative_path} ({len(content)} znaków)")
     return content
 
 def load_context():

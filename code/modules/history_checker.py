@@ -1,5 +1,6 @@
 """
 History Checker - integracja z INDEX_POSTOW.md
+Obsługuje Google Drive (read) i lokalne pliki (read/write)
 """
 import os
 import re
@@ -8,12 +9,30 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Import Google Drive loader
+try:
+    from .google_drive_loader import get_loader
+    DRIVE_AVAILABLE = True
+except ImportError:
+    DRIVE_AVAILABLE = False
+
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
 INDEX_PATH = os.path.join(BASE_DIR, os.getenv("INDEX_PATH", "MARKETING/05_PUBLIKACJE/INDEX_POSTOW.md"))
+INDEX_RELATIVE_PATH = os.getenv("INDEX_PATH", "MARKETING/05_PUBLIKACJE/INDEX_POSTOW.md")
 
 def parse_index():
-    if not os.path.exists(INDEX_PATH): return []
-    with open(INDEX_PATH, 'r', encoding='utf-8') as f: content = f.read()
+    # Try Google Drive first
+    if DRIVE_AVAILABLE:
+        try:
+            loader = get_loader()
+            content = loader.read_file(INDEX_RELATIVE_PATH)
+        except Exception as e:
+            print(f"⚠️ Drive read failed, trying local: {e}")
+            if not os.path.exists(INDEX_PATH): return []
+            with open(INDEX_PATH, 'r', encoding='utf-8') as f: content = f.read()
+    else:
+        if not os.path.exists(INDEX_PATH): return []
+        with open(INDEX_PATH, 'r', encoding='utf-8') as f: content = f.read()
     history = []
     pattern = r'|\s*([\d\-]+)\s*|\s*([^\|]+?)\s*|\s*([^\|]+?)\s*|\s*([^\|]+?)\s*|\s*([^\|]+?)\s*|'
     matches = re.findall(pattern, content)
@@ -46,9 +65,20 @@ def check_uniqueness(new_topic, history=None, days_threshold=30):
     return {'is_unique': True, 'similar_posts': [], 'recommendation': "OK"}
 
 def append_to_index(post_data):
-    if not os.path.exists(INDEX_PATH): return False
+    # Read from Drive or local
+    if DRIVE_AVAILABLE:
+        try:
+            loader = get_loader()
+            content = loader.read_file(INDEX_RELATIVE_PATH)
+        except Exception as e:
+            print(f"⚠️ Drive read failed: {e}")
+            if not os.path.exists(INDEX_PATH): return False
+            with open(INDEX_PATH, 'r', encoding='utf-8') as f: content = f.read()
+    else:
+        if not os.path.exists(INDEX_PATH): return False
+        with open(INDEX_PATH, 'r', encoding='utf-8') as f: content = f.read()
+
     new_row = f"| {post_data['date']} | {post_data['topic']} | {'✅' if post_data.get('has_file', True) else '❌'} | {'✅' if post_data.get('has_graphic', False) else '❌'} | - |\n"
-    with open(INDEX_PATH, 'r', encoding='utf-8') as f: content = f.read()
     
     # Marker bez polskich znaków do wyszukiwania
     for line in content.split('\n'):
