@@ -15,12 +15,37 @@ Rozwijalna aplikacja SaaS dla content creatorów w B2B/Industrial:
 
 ---
 
+## 🤖 AI MODELS
+
+**Docelowy model:** `gemini-3.0-flash-preview`
+
+### Dlaczego Gemini 3.0?
+- Najnowsza wersja (2026)
+- Lepsza jakość generowania treści
+- Szybkość: Flash = balance między jakością a ceną
+- Preview = early access do najnowszych features
+
+### Inne modele (fallback):
+- `gemini-1.5-flash` - stabilny, szybki (jeśli 3.0 niedostępny)
+- `gemini-1.5-pro` - lepsza jakość, wolniejszy, droższy
+
+### Konfiguracja:
+```toml
+# .streamlit/secrets.toml
+GEMINI_MODEL = "gemini-3.0-flash-preview"
+GEMINI_API_KEY = "your-api-key"
+```
+
+**WAŻNE:** Nie używaj `gemini-2.0-flash-exp` - jest eksperymentalny i często niedostępny.
+
+---
+
 ## 📍 OBECNY STAN
 
-**Wersja:** v0.1.0 (Prototyp)
-**Status:** ✅ Working Baseline
-**Tech Stack:** Python + Streamlit + Gemini AI
-**Deployment:** Localhost
+**Wersja:** v0.2.0 (Prototyp + Queue System)
+**Status:** ✅ Deployed on Streamlit Cloud
+**Tech Stack:** Python + Streamlit + Gemini 3.0 Flash + Google Drive API
+**Deployment:** https://ai-content-factory.streamlit.app/
 
 ### ✅ Co działa:
 - Content Quality Loop (Generator + Evaluator + Improver + Fact-checker)
