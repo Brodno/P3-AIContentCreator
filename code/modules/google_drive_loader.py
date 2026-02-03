@@ -41,7 +41,7 @@ class DriveLoader:
         try:
             # Get credentials from Streamlit secrets
             creds_dict = dict(st.secrets['google_drive'])
-            self.folder_id = st.secrets.get('drive_folder_id', '')
+            self.folder_id = st.secrets['drive_folder_id']
 
             # Create credentials
             SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
