@@ -138,22 +138,49 @@ queue_manager = get_queue_manager()
 # Funkcje tematów
 def find_topic_files():
     """Znajduje wszystkie pliki tematy*.md"""
-    code_dir = os.path.dirname(__file__)
+    # Get code directory more reliably
+    if __file__:
+        code_dir = os.path.dirname(os.path.abspath(__file__))
+    else:
+        code_dir = os.getcwd()
+
+    # Fallback to current directory if empty
+    if not code_dir:
+        code_dir = '.'
+
     topic_files = []
-    for filename in os.listdir(code_dir):
-        if filename.startswith('tematy') and filename.endswith('.md'):
-            topic_files.append(os.path.join(code_dir, filename))
+
+    try:
+        for filename in os.listdir(code_dir):
+            if filename.startswith('tematy') and filename.endswith('.md'):
+                topic_files.append(os.path.join(code_dir, filename))
+    except Exception as e:
+        st.warning(f"⚠️ Nie można odczytać katalogu {code_dir}: {e}")
+        # Try current directory as last resort
+        try:
+            for filename in os.listdir('.'):
+                if filename.startswith('tematy') and filename.endswith('.md'):
+                    topic_files.append(filename)
+        except:
+            pass
+
     return sorted(topic_files)
 
 def load_all_topics():
     """Wczytuje wszystkie tematy"""
     topic_files = find_topic_files()
+
+    if not topic_files:
+        st.error(f"❌ Nie znaleziono plików tematy*.md w katalogu: {os.getcwd()}")
+        st.info("💡 Upewnij się, że pliki tematy100.md, tematy200.md itp. są w folderze code/")
+        return []
+
     all_topics = []
     for filepath in topic_files:
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
-            for line in content.split('\\n'):
+            for line in content.split('\n'):
                 line = line.strip()
                 if line and line[0].isdigit() and '. ' in line:
                     topic = line.split('. ', 1)[1].strip()
@@ -165,6 +192,7 @@ def load_all_topics():
                         })
         except Exception as e:
             st.error(f"Błąd wczytywania {filepath}: {e}")
+
     return all_topics
 
 def get_used_topics():
