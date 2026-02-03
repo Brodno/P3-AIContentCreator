@@ -1,0 +1,20 @@
+[
+  {
+    "iteration": 1,
+    "score": 100,
+    "post_content": "Maszyna za milion to początek.\n\nMyślisz, że cena na fakturze zakupu to Twój największy koszt. Gratuluję optymizmu. Prawdziwe pieniądze uciekają tam, gdzie handlowiec odwraca wzrok – w drobnych druczkach umowy.\n\nPrzez 6 lat budowałem maszyny w WiR Automation. Widziałem setki ofert. Większość to pudrowanie syfu, który wyjdzie po pierwszym roku eksploatacji. \n\nOto gdzie tracisz kasę, gdy kupujesz maszynę za 500k – 2M PLN:\n\n- **Vendor Lock-in na części:** Kupujesz maszynę z autorskimi komponentami producenta. Potrzebujesz łożyska? U nich kosztuje 800 PLN. Na wolnym rynku – 120 PLN. Ale musisz brać od nich, bo stracisz gwarancję. To nie serwis, to haracz.\n- **Kody źródłowe PLC:** Nie masz ich zapisu w umowie? Jesteś zakładnikiem. Chcesz zmienić czas cyklu o 0,5 sekundy? Płacisz 5000 PLN netto za \"wizytę programisty\", który przyjedzie za miesiąc.\n- **Czas reakcji vs. Czas naprawy:** \"Gwarantujemy reakcję w 24h\". Super. Inżynier odpisze Ci na maila w 23. godzinie: \"Otrzymaliśmy zgłoszenie\". Przyjedzie za dwa tygodnie. Linia stoi, Ty tracisz 10k PLN za każdą zmianę przestoju.\n- **Odbiory FAT na \"idealnym\" surowcu:** Producent testuje maszynę na swoim, wyselekcjonowanym materiale. Na hali masz gorszą partię i maszyna się dławi. Jeśli nie wymusisz testów na Twoim realnym produkcie – kupujesz drogi przycisk do papieru.\n\nZasady bezpieczeństwa? Norma ISO 13849-1 to nie jest sugestia. To Twoja polisa przed prokuratorem, gdy operatorowi podwinie się noga. Jeśli w umowie nie ma konkretnych kategorii bezpieczeństwa (PL), bierzesz ryzyko na siebie.\n\nW mojej praktyce audytorskiej widzę, że 8 na 10 umów nie chroni inwestora przed przestojami. \n\nJaki był Twój najdroższy \"drobny druczek\" w kontrakcie na maszynę?\n\n---\nPROMPT GRAFICZNY (Nano Banana Pro):\nCinematic, industrial photography of a thick paper contract lying on a metal workbench in a factory. A shark's fin made of sharp metallic gears is emerging from the surface of the paper as if it's swimming through the contract. Hard side lighting, sparks from a grinder in the blurred background. High contrast, 8k resolution. Text on the paper in Polish: \"UKRYTE KOSZTY\".",
+    "evaluation": {
+      "breakdown": {
+        "hook": 30,
+        "eeat": 25,
+        "visual": 20,
+        "pain": 15,
+        "cta": 10
+      },
+      "total_score": 100,
+      "feedback": "Materiał wzorcowy. Połączenie konkretnych stawek (120 vs 800 PLN) z normami prawnymi (ISO) tworzy autorytet nie do podważenia.",
+      "strengths": "Bezbłędne wykorzystanie inżynierskiego konkretu (PLC, FAT, ISO 13849-1) oraz brutalna, finansowa agitacja bólu.",
+      "weaknesses": "Brak - tekst jest precyzyjny, merytoryczny i świetnie sformatowany pod czytelnika B2B."
+    }
+  }
+]

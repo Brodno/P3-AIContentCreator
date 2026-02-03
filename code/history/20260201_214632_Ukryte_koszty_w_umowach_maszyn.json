@@ -1,0 +1,20 @@
+[
+  {
+    "iteration": 1,
+    "score": 99,
+    "post_content": "344 000 PLN w błoto.\n\nTyle kosztował \"tani\" automat w firmie produkcyjnej pod Poznaniem. \nWłaściciel cieszył się, że urwał 15% z ceny rynkowej. \nRok później licznik strat zatrzymał się na połowie wartości maszyny.\n\nHandlowiec obiecał złote góry. Umowa miała 4 strony. \nProblem w tym, że diabeł nie tkwi w szczegółach. On tam mieszka.\n\nOto co wyczyści Ci portfel, jeśli nie sprawdzisz tego przed podpisem:\n\n- Vendor Lock-in. Kod PLC jest zablokowany hasłem. Każda zmiana parametrów to telefon do serwisu producenta i faktura na 1500 EUR za \"zdalne wsparcie\". Jesteś zakładnikiem.\n- Media i fundamenty. Maszyna potrzebuje 120 kW i specjalnej wylewki. Handlowiec o tym \"zapomniał\". Twoja posadzka pęka po tygodniu, a przyłącze nie wytrzymuje startu silników. Koszt naprawy? 85 000 PLN na start.\n- Brak realnego FAT (Factory Acceptance Test). Jeśli nie sprawdzisz maszyny na swoim detalu u producenta, kupujesz kota w worku. Na hali u nich \"działało\". U Ciebie nie trzyma cyklu i sypie błędami.\n- Części \"special\". Łożyska i paski o niestandardowych wymiarach, dostępne tylko u jednego dostawcy. Marża 400% to branżowy standard.\n\nInwestycja w automatyzację to nie jest zakup auta z salonu. \nTo skomplikowany projekt inżynieryjny przykryty marketingowym lukrem.\n\nDane z portali branżowych i moje audyty pokazują to samo: typowe MŚP traci od 50 do 500k PLN przez luki w umowach. \nJeden zapis o normach bezpieczeństwa ISO może sprawić, że PIP zamknie Ci linię zaraz po montażu.\n\nJa sprawdzam 126 punktów w umowie, zanim klient przeleje zaliczkę. \nDopiero wtedy szampan smakuje jak sukces, a nie jak porażka na raty.\n\nKtóry \"ukryty koszt\" najbardziej zabolał Twój budżet przy ostatniej inwestycji?",
+    "evaluation": {
+      "breakdown": {
+        "hook": 30,
+        "eeat": 24,
+        "visual": 20,
+        "pain": 15,
+        "cta": 10
+      },
+      "total_score": 99,
+      "feedback": "Wyrzuć wyświechtane metafory o diable i szampanie, które trącą tanim coachingiem. Podaj konkretny numer normy ISO dotyczącej bezpieczeństwa maszynowego, by ostatecznie ubić argumenty niedowiarków.",
+      "strengths": "Brutalnie konkretne liczby (344k, 120kW, 85k) i doskonałe uderzenie w realne bolączki techniczne jak vendor lock-in czy brak FAT.",
+      "weaknesses": "Lekkie zachwianie profesjonalizmu przez literackie klisze ('diabeł tam mieszka'), które nieco rozmiękczają inżynierski konkret."
+    }
+  }
+]

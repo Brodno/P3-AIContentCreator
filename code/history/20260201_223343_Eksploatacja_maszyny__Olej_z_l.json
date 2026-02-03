@@ -1,0 +1,74 @@
+[
+  {
+    "iteration": 1,
+    "score": 92,
+    "post_content": "Płacisz 400 PLN za litr?\n\nWłaśnie sfinansowałeś nową Teslę handlowca Twojego dostawcy maszyn.\n\nRobię audyt wtryskarki za 1,8 mln PLN. W instrukcji tłustym drukiem: „Używać wyłącznie oleju OEM-GOLD-FLUID. Niezastosowanie grozi awarią układu hydraulicznego”.\n\nCena? 380 zł netto za litr. \nPotrzeba? 400 litrów na wymianę. \nRachunek? Ponad 150 tys. PLN.\n\nBiorę kartę charakterystyki tego „cudownego” preparatu. \nPatrzę na parametry: lepkość kinematyczna, wskaźnik lepkości, temperatura zapłonu.\n\nPod spodem siedzi klasyczny olej hydrauliczny klasy HM/HLP, spełniający normę DIN 51524 cz. 2. \nDokładnie taki sam, jaki kupisz u dowolnego polskiego dystrybutora za 18-22 zł za litr.\n\nRóżnica? \nNaklejka z logo producenta maszyny i marża przebijająca sufit.\n\nProducenci maszyn nie mają rafinerii. Kupują bazy od Shella, Mobila czy Orlenu. Dolewają barwnik (żeby serwisant widział „obcy” olej) i straszą utratą gwarancji. To klasyczny Vendor Lock-in.\n\nJak nie dać się oskubać?\n\n- Sprawdź normę ISO/DIN w dokumentacji (nie nazwę handlową).\n- Porównaj karty charakterystyki (SDS).\n- Jeśli parametry lepkości i dodatki AW/EP się zgadzają – maszyna nie ma prawa wiedzieć, że płaciłeś za olej 10 razy mniej.\n\nW branży CNC i przetwórstwa tworzyw to najprostszy sposób na wyciągnięcie od klienta kilkudziesięciu tysięcy złotych rocznie „za nic”.\n\nIle kosztował litr oleju przy Twoim ostatnim serwisie?\n\n#AgencjaOP #UtrzymanieRuchu #Produkcja #OptymalizacjaKosztów #B2B\n\n---\nPROMPT GRAFICZNY (Nano Banana Pro):\nCinematic, close-up shot in an industrial hall. A hand in a dirty work glove is pouring golden hydraulic oil from a plain, gray barrel into a machine. In the background, a blurred expensive CNC machine. Sharp focus on the oil stream. Text on the image in bold, industrial font: \"NAKLEJKA WARTA 1000% MARŻY?\"",
+    "evaluation": {
+      "breakdown": {
+        "hook": 28,
+        "eeat": 24,
+        "visual": 18,
+        "pain": 14,
+        "cta": 8
+      },
+      "total_score": 92,
+      "feedback": "Matematyka i logika techniczna bez zarzutu. Obliczenie 380 PLN * 400 l = 152 000 PLN zgadza się z tezą 'ponad 150 tys.'. Przywołanie normy DIN 51524 cz. 2 oraz klasyfikacji HM/HLP buduje silny autorytet inżynierski. Cena 18-22 zł za litr wysokiej jakości oleju HLP w hurcie/detalu jest rynkowo uzasadniona. Tekst jest spójny, merytoryczny i uderza w realny problem finansowy utrzymania ruchu.",
+      "strengths": "Bardzo konkretne dane liczbowe i techniczne (AW/EP, SDS, DIN). Wykorzystanie mechanizmu Vendor Lock-in jako głównego antagonisty. Hook jest agresywny, ale poparty konkretnym wyliczeniem kosztów, co zatrzymuje profesjonalistę.",
+      "weaknesses": "Cena 380 PLN/l za standardowy olej HLP jest ekstremalna nawet jak na standardy OEM (zwykle narzuty kończą się na 80-120 PLN/l), co u najbardziej sceptycznych inżynierów może wywołać 'red flag' dotyczący wiarygodności case study, mimo że matematycznie wszystko się sumuje."
+    }
+  },
+  {
+    "iteration": 2,
+    "score": 88,
+    "post_content": "Płacisz 135 PLN za litr oleju?\n\nWłaśnie sfinansowałeś nową Teslę handlowca Twojego dostawcy maszyn.\n\nRobię audyt wtryskarki za 1,8 mln PLN. W instrukcji tłustym drukiem: „Używać wyłącznie oleju OEM-ULTRA-PERFORMANCE. Niezastosowanie grozi awarią układu i utratą gwarancji”.\n\nCena? 135 zł netto za litr. \nPotrzeba? 400 litrów na wymianę. \nRachunek? 54 000 PLN za sam płyn.\n\nBiorę kartę charakterystyki (SDS) tego „cudownego” preparatu. \nPatrzę na parametry: lepkość kinematyczna w 40°C, wskaźnik lepkości, temperatura zapłonu, pakiet dodatków.\n\nPod spodem siedzi klasyczny olej hydrauliczny klasy HM/HLP, spełniający normę DIN 51524 cz. 2. \nDokładnie taki sam, jaki kupisz u dowolnego polskiego dystrybutora za 22 zł za litr.\n\nRóżnica? \n45 200 PLN marży ukrytej pod naklejką z logo producenta maszyny. \n\nProducenci maszyn nie mają rafinerii. Kupują bazy od Shella, Mobila czy Totala. Dolewają barwnik (żeby serwisant widział „obcy” olej) i stosują klasyczny Vendor Lock-in, bazując na strachu właściciela przed awarią.\n\nJak nie dać się oskubać, zachowując 100% bezpieczeństwa maszyny?\n\n1. Sprawdź normę ISO/DIN w dokumentacji (nie nazwę handlową). Szukaj zapisu o kompatybilności z pompami tłoczkowymi (np. test Eaton-Vickers 35VQ25).\n2. Porównaj karty charakterystyki (SDS). Jeśli parametry lepkości i dodatki AW/EP się zgadzają – maszyna „nie widzi” różnicy w cenie.\n3. Zlecaj regularne badanie czystości oleju (klasa wg ISO 4406). To realnie chroni pompę, a nie droższa naklejka na beczce.\n\nW branży CNC i przetwórstwa tworzyw to najprostszy sposób na odzyskanie kilkudziesięciu tysięcy złotych rocznie, które obecnie wyrzucasz w błoto.\n\nIle kosztował litr oleju przy Twoim ostatnim serwisie? Sprawdzałeś kiedyś jego normę DIN?\n\n#AgencjaOP #UtrzymanieRuchu #Produkcja #OptymalizacjaKosztów #B2B #CNC",
+    "evaluation": {
+      "breakdown": {
+        "hook": 28,
+        "eeat": 25,
+        "visual": 12,
+        "pain": 15,
+        "cta": 8
+      },
+      "total_score": 88,
+      "feedback": "Logika matematyczna i inżynierska jest bezbłędna. Wyliczenia (135 PLN * 400l = 54 000; 22 PLN * 400l = 8 800; różnica 45 200) są poprawne i oparte na realnych stawkach rynkowych dla olejów HLP oraz narzutów OEM. Przywołanie testu Eaton-Vickers 35VQ25 i normy DIN 51524 cz. 2 buduje potężny autorytet. Tekst jest surowy, konkretny i technicznie uzasadniony.",
+      "strengths": "Precyzyjne operowanie faktami technicznymi (SDS, ISO 4406, parametry lepkościowe). Bezpośrednie uderzenie w marżę dystrybutora i mechanizm Vendor Lock-in. Bardzo wysoka wiarygodność inżynierska.",
+      "weaknesses": "Warstwa wizualna opiera się wyłącznie na formatowaniu tekstu – brak graficznego porównania kart charakterystyki lub tabeli kosztów, co przy takich kwotach byłoby zabójczo skuteczne. CTA jest poprawne, ale mogłoby silniej kierować do konkretnego działania (np. audytu)."
+    }
+  },
+  {
+    "iteration": 3,
+    "score": 93,
+    "post_content": "Właśnie sfinansowałeś nową Teslę handlowca Twojego dostawcy maszyn. \n\nPłacisz 135 PLN za litr oleju hydraulicznego? To nie jest technologia kosmiczna. To klasyczny Vendor Lock-in żerujący na strachu.\n\nRobię audyt wtryskarki za 1,8 mln PLN. W instrukcji tłustym drukiem: \n„Używać wyłącznie oleju OEM-ULTRA-PERFORMANCE. Niezastosowanie grozi awarią i utratą gwarancji”.\n\n**Szybki rachunek z hali:**\n• Cena: 135 PLN netto / litr\n• Potrzeba: 400 litrów na wymianę\n• Faktura: 54 000 PLN za sam płyn\n\n**Zestawmy to z faktami (Karta Charakterystyki SDS):**\n\n| Parametr | Olej \"Premium\" OEM | Olej HLP (Zamiennik) |\n| :--- | :--- | :--- |\n| Norma DIN | 51524 cz. 2 | 51524 cz. 2 |\n| Test Eaton-Vickers | Zgodny (35VQ25) | Zgodny (35VQ25) |\n| Baza | Grupa II (np. Shell/Mobil) | Grupa II (np. Shell/Mobil) |\n| **Cena za litr** | **135 PLN** | **22 PLN** |\n| **KOSZT CAŁOŚCI** | **54 000 PLN** | **8 800 PLN** |\n\n**Różnica? 45 200 PLN marży ukrytej pod naklejką z logo producenta maszyny.**\n\nProducenci maszyn nie mają rafinerii. Kupują bazy od gigantów jak Shell, Mobil czy Total. Dolewają barwnik (żeby serwisant widział „obcy” kolor) i sprzedają strach przed awarią. \n\nTwoja pompa nie czyta etykiet. Ona „czuje” lepkość kinematyczną i pakiet dodatków AW/EP.\n\n**Jak przestać przepłacać i zachować 100% bezpieczeństwa?**\n\n1. **Szukaj normy, nie nazwy.** W dokumentacji sprawdź zapis o kompatybilności z pompami tłoczkowymi (np. wspomniany test Eaton-Vickers).\n2. **Zderz karty SDS.** Jeśli parametry lepkości w 40°C i wskaźnik lepkości się zgadzają – płacisz za marketing, nie za jakość.\n3. **Inwestuj w czystość, nie w markę.** Zlecaj regularne badanie czystości oleju (klasa wg ISO 4406). To realnie chroni układ, a nie droższa beczka.\n\nW branży CNC i przetwórstwa tworzyw to najprostszy sposób na odzyskanie 40-50 tys. PLN rocznie, które obecnie wyrzucasz w błoto.\n\nIle kosztował litr oleju przy Twoim ostatnim serwisie? Sprawdzałeś jego normę DIN, czy po prostu podpisałeś fakturę?\n\n---\n👉 **Planujesz zakup maszyny za 1-2 mln PLN i nie chcesz dać się „ubrać” w kosmiczne koszty eksploatacji? Napisz do mnie. Robię audyty techniczne, które zwracają się przy pierwszej wymianie oleju.**\n\n#AgencjaOP #UtrzymanieRuchu #Produkcja #OptymalizacjaKosztów #B2B #CNC #Przemysł",
+    "evaluation": {
+      "breakdown": {
+        "hook": 28,
+        "eeat": 24,
+        "visual": 18,
+        "pain": 14,
+        "cta": 9
+      },
+      "total_score": 93,
+      "feedback": "Technicznie bez zarzutu. Matematyka jest bezlitosna i poprawna: 135 PLN * 400 l faktycznie daje 54 000 PLN, a różnica 45 200 PLN obliczona prawidłowo. Ceny rynkowe (22 PLN za litr HLP w hurcie vs 135 PLN za OEM) są realistyczne i dobrze oddają patologię marż producentów maszyn. Przywołanie konkretnej normy DIN 51524 cz. 2 oraz testu Eaton-Vickers 35VQ25 to inżynierski konkret, który zamyka usta sceptykom. Logika 'pompa nie czyta etykiet' jest brutalnie prawdziwa.",
+      "strengths": "Bardzo mocne E-E-A-T dzięki konkretnym parametrom technicznym (Grupa II, ISO 4406). Tabela świetnie wizualizuje absurdalną marżę. Hook uderza w ego i portfel jednocześnie.",
+      "weaknesses": "Brakuje jedynie krótkiej wzmianki o filtracji przy pierwszym zalaniu zamiennika (nowy olej z beczki często nie spełnia klasy czystości wymaganej przez wtryskarkę), co jeszcze bardziej podbiłoby autorytet eksperta."
+    }
+  },
+  {
+    "iteration": 4,
+    "score": 97,
+    "post_content": "Właśnie sfinansowałeś nową Teslę handlowca Twojego dostawcy maszyn. Gratuluję, jesteś wyjątkowo hojnym szefem.\n\nPłacisz 135 PLN za litr oleju hydraulicznego? To nie jest technologia kosmiczna. To klasyczny Vendor Lock-in żerujący na Twoim strachu.\n\nRobię audyt wtryskarki za 1,8 mln PLN. W instrukcji tłustym drukiem: \n„Używać wyłącznie oleju OEM-ULTRA-PERFORMANCE. Niezastosowanie grozi awarią i utratą gwarancji”.\n\n**Szybki rachunek z hali:**\n• Cena: 135 PLN netto / litr\n• Potrzeba: 400 litrów na wymianę\n• Faktura: 54 000 PLN za sam płyn\n\n**Zestawmy to z faktami (Karta Charakterystyki SDS):**\n\n| Parametr | Olej \"Premium\" OEM | Olej HLP (Zamiennik) |\n| :--- | :--- | :--- |\n| Norma DIN | 51524 cz. 2 | 51524 cz. 2 |\n| Test Eaton-Vickers | Zgodny (35VQ25) | Zgodny (35VQ25) |\n| Baza | Grupa II (np. Shell/Mobil) | Grupa II (np. Shell/Mobil) |\n| **Cena za litr** | **135 PLN** | **22 PLN** |\n| **KOSZT CAŁOŚCI** | **54 000 PLN** | **8 800 PLN** |\n\n**Różnica? 45 200 PLN marży ukrytej pod naklejką z logo producenta maszyny.**\n\nProducenci maszyn nie mają rafinerii. Kupują bazy od gigantów jak Shell, Mobil czy Total. Dolewają barwnik (żeby serwisant widział „obcy” kolor) i sprzedają strach przed awarią. Twoja pompa nie czyta etykiet. Ona „czuje” lepkość kinematyczną i pakiet dodatków AW/EP.\n\n**Jak przestać przepłacać i zachować 100% bezpieczeństwa?**\n\n1. **Szukaj normy, nie nazwy.** W dokumentacji sprawdź zapis o kompatybilności z pompami tłoczkowymi (np. wspomniany test Eaton-Vickers).\n2. **Zderz karty SDS.** Jeśli parametry lepkości w 40°C i wskaźnik lepkości się zgadzają – płacisz za marketing, nie za jakość.\n3. **Kluczowy błąd (uwaga!):** Nowy olej z beczki – nawet ten za 135 PLN – często jest brudniejszy niż ten, który masz w maszynie. Nigdy nie lej go „z wiadra”. \n4. **Inwestuj w filtrację, nie w markę.** Zastosuj agregat filtracyjny przy zalaniu (min. 3-5 mikronów), by osiągnąć klasę czystości wg ISO 4406 wymaganą dla zaworów proporcjonalnych. To realnie chroni układ, a nie droższa naklejka na beczce.\n\nW branży CNC i przetwórstwa tworzyw to najprostszy sposób na odzyskanie 40-50 tys. PLN rocznie, które obecnie wyrzucasz w błoto.\n\nIle kosztował litr oleju przy Twoim ostatnim serwisie? Sprawdzałeś jego normę DIN i klasę czystości przed zalaniem, czy po prostu podpisałeś fakturę „dla świętego spokoju”?\n\n---\n👉 **Planujesz zakup maszyny za 1-2 mln PLN i nie chcesz dać się „ubrać” w kosmiczne koszty eksploatacji? Napisz do mnie. Robię audyty techniczne, które zwracają się przy pierwszej wymianie oleju.**\n\n#AgencjaOP #UtrzymanieRuchu #Produkcja #OptymalizacjaKosztów #B2B #CNC #Przemysł #Inżynieria",
+    "evaluation": {
+      "breakdown": {
+        "hook": 30,
+        "eeat": 25,
+        "visual": 18,
+        "pain": 15,
+        "cta": 9
+      },
+      "total_score": 97,
+      "feedback": "Matematyka i logika techniczna są bezbłędne. Obliczenia (135x400=54000 oraz 22x400=8800) zgadzają się co do złotówki. Użycie konkretnych norm (DIN 51524 cz. 2) oraz testu Eaton-Vickers 35VQ25 to najwyższy poziom merytoryki inżynierskiej. Bardzo trafna uwaga o klasie czystości wg ISO 4406 – to kluczowy argument, który wytrąca oręż z ręki serwisom OEM.",
+      "strengths": "Wybitne połączenie agresywnego copywritingu biznesowego z twardą wiedzą inżynierską. Hook o Tesli handlowca uderza w ego właściciela, a analiza kart SDS buduje autorytet eksperta. Świetne przejście od ceny do parametrów fizykochemicznych.",
+      "weaknesses": "Wizualnie sekcja 'Szybki rachunek z hali' mogłaby być nieco lepiej oddzielona od reszty tekstu, aby jeszcze mocniej wyeksponować te 54 000 PLN, ale to drobny szczegół przy tak silnym merytorycznie tekście."
+    }
+  }
+]

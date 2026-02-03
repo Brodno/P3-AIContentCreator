@@ -1,0 +1,18 @@
+[
+  {
+    "iteration": 1,
+    "score": 98,
+    "post_content": "Kupujesz maszynę za milion, a termin dostawy w umowie to często tylko pobożne życzenie.\n\n\nWiększość standardowych wzorów od producentów chroni ich interes, a nie Twoją ciągłość produkcji.\n\n\nZapis 24 tygodnie od wpłaty zaliczki brzmi konkretnie tylko do momentu podpisania dokumentów.\n\n\nPrawdziwa pułapka kryje się w definicji zakończenia prac i momentu przekazania ryzyka.\n\n\nDla dostawcy projekt kończy się często w chwili zgłoszenia gotowości do wysyłki u niego w zakładzie.\n\n\nDla Ciebie maszyna zaczyna istnieć dopiero wtedy, gdy wypluwa gotowy detal na Twojej hali.\n\n\nRóżnica między tymi dwoma punktami to często od 4 do 8 tygodni martwego czasu.\n\n\n- Transport ponadgabarytowy, który tygodniami czeka na zezwolenia drogowe.\n\n\n- Brakujące podzespoły automatyki, które nagle zostają podpięte pod siłę wyższą.\n\n\n- Ekipa montażowa, która utknęła na innym wdrożeniu, bo Twój slot czasowy właśnie przepadł.\n\n\nWidziałem kontrakty na 1,5 mln PLN, gdzie brak precyzyjnych kar za zwłokę w uruchomieniu kosztował firmę 200 tysięcy złotych utraconego zysku. 💰\n\n\nJeśli w umowie widzisz zapis o braku odpowiedzialności za terminowość dostawców trzecich, podpisujesz zgodę na niekontrolowane opóźnienia. 🚨\n\n\nJako inżynier i operator widziałem te maszyny stojące pod plandeką, bo nikt nie dopilnował logistyki w kontrakcie.\n\n\nSprawdzam takie detale podczas audytów technicznych, zanim zaryzykujesz kapitał firmy.\n\n\nPlanujesz zakup nowej linii produkcyjnej w tym roku?\n\n\nNapisz do mnie, sprawdzimy czy Twoja umowa realnie Cię chroni.",
+    "evaluation": {
+      "breakdown": {
+        "hook": 18,
+        "logic_math": 30,
+        "layout_light": 40,
+        "cta": 10
+      },
+      "total_score": 98,
+      "visual_errors": [],
+      "feedback": "Doskonała realizacja standardu 'Light'. Wszystkie akapity są krótkie, oddzielone pustymi liniami i nie zawierają zakazanych gwiazdek ani emoji koła zębatego. Jedyna uwaga dotyczy hooka - technicznie jest poprawny, ale skrócenie go do jednego, urywanego zdania (np. 'Kupujesz maszynę za milion i ryzykujesz.') uderzyłoby jeszcze mocniej."
+    }
+  }
+]

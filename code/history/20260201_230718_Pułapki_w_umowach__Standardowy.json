@@ -1,0 +1,17 @@
+[
+  {
+    "iteration": 1,
+    "score": 98,
+    "post_content": "Kupujesz maszynę za milion złotych i czekasz na nią pół roku dłużej niż obiecano.\n\nStandardowe wzory umów od dostawców mają jedną ukrytą pułapkę.\n\nNazywa się ona: przewidywany termin dostawy.\n\nSłowo przewidywany zwalnia producenta z jakiejkolwiek odpowiedzialności finansowej za opóźnienia.\n\nDla Ciebie każdy tydzień zwłoki to przestój w produkcji i realne straty w portfelu.\n\nSpędziłem 6 lat przy budowie maszyn i widziałem dziesiątki takich kontraktów.\n\nWłaściciele firm często ufają na słowo, bo znają handlowca od lat. ⏳\n\nPrzy inwestycji rzędu 500 000 PLN - 2 000 000 PLN zaufanie to za mało.\n\nPrawidłowa umowa musi zawierać sztywną datę oraz konkretne sankcje.\n\n- Termin końcowy musi być określony kalendarzowo.\n\n- Kary umowne powinny wynosić min. 0.2% wartości maszyny za każdy tydzień zwłoki.\n\n- Zapis musi uwzględniać termin gotowości do wysyłki, a nie tylko wyjazdu z fabryki. 📄\n\nBez tych trzech punktów podpisujesz dokument, który chroni tylko jedną stronę.\n\nPomagam inżynierom i właścicielom firm wyłapać takie błędy, zanim przeleją zaliczkę.\n\nPlanujesz zakup nowej maszyny lub linii produkcyjnej?\n\nNapisz do mnie wiadomość prywatną, a sprawdzę Twoją ofertę pod kątem technicznym.\n\n#produkcja #automatyka #biznes\n\nPROMPT GRAFICZNY:\nZdjęcie wykonane z perspektywy pierwszej osoby (POV). Ręka inżyniera trzymająca długopis nad grubym stosem dokumentów technicznych. W tle widać rozmytą halę produkcyjną z nowoczesną maszyną CNC. Światło jest chłodne, warsztatowe. Wysoka jakość, styl realistyczny, bez zbędnych filtrów.",
+    "evaluation": {
+      "breakdown": {
+        "spacing": 30,
+        "logic_math": 30,
+        "visual_clean": 20,
+        "hook": 18
+      },
+      "total_score": 98,
+      "feedback": "Tekst jest wybitnie przejrzysty pod kątem wizualnym – każda myśl ma swoje miejsce i nie tworzy zbitej ściany. Brak pogrubień (gwiazdek) sprawia, że post wygląda profesjonalnie i czysto. Logika wyliczeń i argumentacja merytoryczna są spójne. Hook jest bardzo silny, choć mógłby być jeszcze bardziej agresywny poprzez wskazanie konkretnej utraty marży, a nie tylko 'straty w portfelu'. Prompt graficzny idealnie koresponduje z treścią, budując autorytet inżyniera."
+    }
+  }
+]

@@ -1,0 +1,356 @@
+[
+  {
+    "iteration": 1,
+    "score": 90,
+    "post_content": "Kupujesz maszynę za 1.42M PLN. W instrukcji czytasz: stosować wyłącznie olej marki producenta.\nPłacisz 415 zł za litr. W środku jest standardowy produkt, który bez logotypu kosztuje 62 zł.\nPłacisz za spokój ducha, który jest iluzją.\n\nProducenci maszyn nie mają własnych rafinerii. Kupują gotowy produkt w paletopojemnikach i zlecają konfekcjonowanie pod własną marką. To stary trik na drenaż portfela klienta po sprzedaży urządzenia.\nFundamentem jest parametr techniczny, a nie marka na fakturze.\nISO VG 32 od dużego koncernu ma te same właściwości smarne co ten sam olej z nalepką OEM.\n\nZgrzyt pojawia się, gdy serwis szuka powodu do odrzucenia gwarancji.\nWystarczy jedna awaria pompy za 76 tys. PLN, by usłyszeć, że użyliście niewłaściwego medium.\nTo klasyczna pułapka.\nRocznie na samej marży OEM w średnim zakładzie ucieka około 11 tys. PLN na zwykłych płynach eksploatacyjnych.\n\nW AgencjiOP podczas audytów zawsze porównujemy karty charakterystyki (MSDS).\nJeśli parametry, lepkość i dodatki uszlachetniające się zgadzają, producent nie ma technicznych podstaw do podważenia jakości smarowania.\nAle taką bitwę wygrywa się na etapie negocjowania kontraktu, a nie przy uszkodzonym tłoczysku.\n\nMacie w swoich umowach serwisowych listę dopuszczonych zamienników, czy co roku robicie prezent producentowi maszyny?\n\n#AgencjaOP #produkcja #automatyzacja",
+    "evaluation": {
+      "breakdown": {
+        "hook": 28,
+        "eeat": 18,
+        "visual": 20,
+        "pain": 14,
+        "cta": 10
+      },
+      "total_score": 90,
+      "logic_check": {
+        "passed": false,
+        "errors": [
+          "Cena 415 PLN/L za olej hydrauliczny/smarny jest nierealna (zawyżona o ok. 250-300%), co podważa wiarygodność inżynierską",
+          "Samo ISO VG 32 określa tylko klasę lepkości, a nie pełną specyfikację (brak wzmianki o pakietach dodatków AW/EP)"
+        ]
+      },
+      "format_errors": [],
+      "repetition_check": {
+        "numbers_copied": false,
+        "phrases_copied": false,
+        "details": "Liczby i kwoty są unikalne, nie powielają przykładów z instrukcji."
+      },
+      "feedback": "Zmień kwotę 415 PLN na bardziej realistyczną (np. 140-160 PLN), żeby nie brzmieć jak handlowiec bajkopisarz. Dodaj wzmiankę o TDS (Technical Data Sheet), bo MSDS to karta bezpieczeństwa i nie zawiera wszystkich parametrów technicznych oleju.",
+      "strengths": "Doskonały rytm i brak zbędnej waty. CTA jest konkretne i uderza w realny problem zarządzania kontraktami serwisowymi."
+    },
+    "fact_check_results": {
+      "all_claims": [
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "0.5M - 5.0M PLN (dla maszyn przemysłowych)",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Kwota 1,42 mln PLN jest standardowym kosztem zakupu nowoczesnej maszyny przemysłowej, takiej jak wysokiej klasy centrum obróbcze CNC, wtryskarka lub specjalistyczna maszyna budowlana.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "Kupujesz maszynę za 1.42M PLN.",
+            "type": "price",
+            "search_query": "średnia cena maszyn przemysłowych CNC wtryskarki 1.42 mln PLN",
+            "context": "Koszt maszyny"
+          }
+        },
+        {
+          "is_realistic": false,
+          "confidence": "medium",
+          "real_range": "80-180 PLN/L",
+          "verdict": "ZAWYŻONE",
+          "explanation": "Cena 415 zł za litr standardowego oleju jest skrajnie wysoka; typowe marże OEM dla produktów smarnych wynoszą od 100% do 300%, co przy bazie 62 zł dawałoby kwotę rzędu 120-180 zł.",
+          "correction_hint": "Zweryfikuj czy produkt nie jest specjalistycznym smarem technicznym (np. do wrzecion CNC), gdzie ceny bywają wyższe, bo dla standardowego oleju silnikowego/hydraulicznego cena jest nierealna.",
+          "original_claim": {
+            "claim": "Płacisz 415 zł za litr. W środku jest standardowy produkt, który bez logotypu kosztuje 62 zł.",
+            "type": "proportion",
+            "search_query": "porównanie cen olejów przemysłowych OEM vs zamiennik cena za litr",
+            "context": "Marża oleju"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "Marża OEM wynosi zazwyczaj 200-500% ceny rynkowej za ten sam skład chemiczny",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Większość producentów maszyn (OEM) nie posiada własnych rafinerii i zleca produkcję olejów dużym koncernom, stosując rebranding produktów o identycznej specyfikacji technicznej (np. DIN 51524-2).",
+          "correction_hint": "Zawsze należy porównać karty techniczne (TDS) i konkretne aprobaty producenta, aby upewnić się, że pakiet dodatków uszlachetniających jest identyczny.",
+          "original_claim": {
+            "claim": "ISO VG 32 od dużego koncernu ma te same właściwości smarne co ten sam olej z nalepką OEM.",
+            "type": "technical",
+            "search_query": "karta charakterystyki ISO VG 32 właściwości smarne OEM vs zamiennik",
+            "context": "Parametry techniczne"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "10,000 - 150,000 PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "W kontekście przemysłowym, naprawa lub wymiana specjalistycznych pomp (np. wysokociśnieniowych, procesowych lub hydrauliki siłowej w maszynach budowlanych) często osiąga takie kwoty.",
+          "correction_hint": "Warto doprecyzować typ pompy, gdyż dla zastosowań domowych kwota byłaby rażąco zawyżona, ale w przemyśle jest standardowa.",
+          "original_claim": {
+            "claim": "awaria pompy za 76 tys. PLN",
+            "type": "price",
+            "search_query": "koszt wymiany pompy hydraulicznej w maszynie przemysłowej cena",
+            "context": "Koszt naprawy"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "5,000 - 30,000 PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Marża OEM na płynach eksploatacyjnych (oleje, chłodziwa) wynosi zazwyczaj od 100% do 300% względem zamienników o tej samej specyfikacji; przy flocie 10-20 maszyn kwota 11 tys. PLN rocznie jest wartością konserwatywną.",
+          "correction_hint": "Wartość ta może być znacznie wyższa w zakładach intensywnie użytkujących wtryskarki lub duże prasy hydrauliczne.",
+          "original_claim": {
+            "claim": "Rocznie na samej marży OEM w średnim zakładzie ucieka około 11 tys. PLN na zwykłych płynach eksploatacyjnych.",
+            "type": "roi",
+            "search_query": "potencjalne oszczędności na zamiennikach płynów eksploatacyjnych w zakładzie produkcyjnym",
+            "context": "Oszczędności roczne"
+          }
+        }
+      ],
+      "suspicious_claims": [
+        {
+          "is_realistic": false,
+          "confidence": "medium",
+          "real_range": "80-180 PLN/L",
+          "verdict": "ZAWYŻONE",
+          "explanation": "Cena 415 zł za litr standardowego oleju jest skrajnie wysoka; typowe marże OEM dla produktów smarnych wynoszą od 100% do 300%, co przy bazie 62 zł dawałoby kwotę rzędu 120-180 zł.",
+          "correction_hint": "Zweryfikuj czy produkt nie jest specjalistycznym smarem technicznym (np. do wrzecion CNC), gdzie ceny bywają wyższe, bo dla standardowego oleju silnikowego/hydraulicznego cena jest nierealna.",
+          "original_claim": {
+            "claim": "Płacisz 415 zł za litr. W środku jest standardowy produkt, który bez logotypu kosztuje 62 zł.",
+            "type": "proportion",
+            "search_query": "porównanie cen olejów przemysłowych OEM vs zamiennik cena za litr",
+            "context": "Marża oleju"
+          }
+        }
+      ],
+      "verified_claims": [
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "0.5M - 5.0M PLN (dla maszyn przemysłowych)",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Kwota 1,42 mln PLN jest standardowym kosztem zakupu nowoczesnej maszyny przemysłowej, takiej jak wysokiej klasy centrum obróbcze CNC, wtryskarka lub specjalistyczna maszyna budowlana.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "Kupujesz maszynę za 1.42M PLN.",
+            "type": "price",
+            "search_query": "średnia cena maszyn przemysłowych CNC wtryskarki 1.42 mln PLN",
+            "context": "Koszt maszyny"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "Marża OEM wynosi zazwyczaj 200-500% ceny rynkowej za ten sam skład chemiczny",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Większość producentów maszyn (OEM) nie posiada własnych rafinerii i zleca produkcję olejów dużym koncernom, stosując rebranding produktów o identycznej specyfikacji technicznej (np. DIN 51524-2).",
+          "correction_hint": "Zawsze należy porównać karty techniczne (TDS) i konkretne aprobaty producenta, aby upewnić się, że pakiet dodatków uszlachetniających jest identyczny.",
+          "original_claim": {
+            "claim": "ISO VG 32 od dużego koncernu ma te same właściwości smarne co ten sam olej z nalepką OEM.",
+            "type": "technical",
+            "search_query": "karta charakterystyki ISO VG 32 właściwości smarne OEM vs zamiennik",
+            "context": "Parametry techniczne"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "10,000 - 150,000 PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "W kontekście przemysłowym, naprawa lub wymiana specjalistycznych pomp (np. wysokociśnieniowych, procesowych lub hydrauliki siłowej w maszynach budowlanych) często osiąga takie kwoty.",
+          "correction_hint": "Warto doprecyzować typ pompy, gdyż dla zastosowań domowych kwota byłaby rażąco zawyżona, ale w przemyśle jest standardowa.",
+          "original_claim": {
+            "claim": "awaria pompy za 76 tys. PLN",
+            "type": "price",
+            "search_query": "koszt wymiany pompy hydraulicznej w maszynie przemysłowej cena",
+            "context": "Koszt naprawy"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "5,000 - 30,000 PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Marża OEM na płynach eksploatacyjnych (oleje, chłodziwa) wynosi zazwyczaj od 100% do 300% względem zamienników o tej samej specyfikacji; przy flocie 10-20 maszyn kwota 11 tys. PLN rocznie jest wartością konserwatywną.",
+          "correction_hint": "Wartość ta może być znacznie wyższa w zakładach intensywnie użytkujących wtryskarki lub duże prasy hydrauliczne.",
+          "original_claim": {
+            "claim": "Rocznie na samej marży OEM w średnim zakładzie ucieka około 11 tys. PLN na zwykłych płynach eksploatacyjnych.",
+            "type": "roi",
+            "search_query": "potencjalne oszczędności na zamiennikach płynów eksploatacyjnych w zakładzie produkcyjnym",
+            "context": "Oszczędności roczne"
+          }
+        }
+      ],
+      "summary": "⚠️ Znaleziono 1 podejrzanych twierdzeń"
+    }
+  },
+  {
+    "iteration": 2,
+    "score": 100,
+    "post_content": "Kupujesz maszynę za 1.42M PLN. W instrukcji stoi: lej tylko nasz olej albo tracisz gwarancję.\nPłacisz 158 zł za litr. Ten sam produkt bez logotypu producenta kosztuje 44 zł.\nPłacisz za spokój ducha, który jest iluzją.\n\nProducenci maszyn nie mają własnych rafinerii. Kupują gotowy olej w paletopojemnikach i zlecają rozlanie do baniek ze swoją naklejką. To stary trik na drenaż portfela po sprzedaży urządzenia.\nLiczy się specyfikacja techniczna, a nie marka na fakturze.\nOlej ISO VG 32 od dużego koncernu ma te same właściwości smarne i pakiety dodatków AW/EP co ten z nalepką OEM.\n\nSchody zaczynają się przy awarii pompy za 64 tys. PLN. Serwisant bierze próbkę i szuka powodu, żeby odrzucić gwarancję.\nUsłyszysz, że użyliście niewłaściwego medium. To klasyczna pułapka.\nRocznie na samej marży OEM w średnim zakładzie ucieka 14 tys. PLN na zwykłych płynach eksploatacyjnych.\n\nW AgencjiOP podczas audytów zawsze porównujemy karty TDS (Technical Data Sheet).\nJeśli lepkość, temperatura zapłonu i pakiety uszlachetniające się zgadzają, producent nie ma podstaw do podważenia jakości smarowania.\nAle taką bitwę wygrywa się na etapie negocjowania kontraktu, a nie przy uszkodzonym siłowniku.\n\nMacie w swoich umowach serwisowych listę dopuszczonych zamienników, czy co roku robicie prezent producentowi maszyny?\n\n#AgencjaOP #produkcja #utrzymanieruchu",
+    "evaluation": {
+      "breakdown": {
+        "hook": 30,
+        "eeat": 25,
+        "visual": 20,
+        "pain": 15,
+        "cta": 10
+      },
+      "total_score": 100,
+      "logic_check": {
+        "passed": true,
+        "errors": []
+      },
+      "format_errors": [],
+      "repetition_check": {
+        "numbers_copied": false,
+        "phrases_copied": false,
+        "details": "Liczby (1.42M, 158 zł, 44 zł, 64 tys., 14 tys.) są unikalne i nie kopiują przykładów z instrukcji. Zwroty są świeże, zachowano umiar w słownictwie 'dobrym'."
+      },
+      "feedback": "Post jest technicznie i redakcyjnie kompletny. Nie wymaga żadnych poprawek – uderza w konkretny ból finansowy i popiera go twardymi danymi inżynierskimi.",
+      "strengths": "Znakomite użycie parametrów technicznych (ISO VG 32, TDS, AW/EP), które budują autorytet inżyniera. Idealny rytm zdań i zero formatowania typowego dla AI."
+    },
+    "fact_check_results": {
+      "all_claims": [
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "0.5M - 5.0M PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Kwota 1,42 mln PLN jest standardową ceną za średniej klasy maszynę przemysłową, taką jak centrum obróbcze CNC, wtryskarka lub zrobotyzowana linia pakująca.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "Kupujesz maszynę za 1.42M PLN.",
+            "type": "price",
+            "search_query": "średnia cena maszyny przemysłowej CNC wtryskarka 1.42 mln PLN",
+            "context": "cena maszyny"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "35-60 PLN (zamiennik) vs 120-180 PLN (OEM/ASO)",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Różnica w cenie między olejem w opakowaniu producenta samochodu (OEM) w autoryzowanym serwisie a tym samym olejem od producenta bazowego (np. Shell, Castrol) często wynosi 300-400%.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "Płacisz 158 zł za litr. Ten sam produkt bez logotypu producenta kosztuje 44 zł.",
+            "type": "price",
+            "search_query": "cena oleju hydraulicznego OEM vs zamiennik 158 zł 44 zł",
+            "context": "cena oleju"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "Zgodność z normami DIN 51524 cz. 2/3, ISO 11158",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Większość olejów OEM to produkty typu 'private label' produkowane przez duże koncerny petrochemiczne, które bazują na tych samych pakietach dodatków (np. Lubrizol, Afton) i spełniają identyczne normy przemysłowe.",
+          "correction_hint": "Warto zweryfikować konkretne aprobaty (np. Bosch Rexroth RDE 90235), ponieważ niektóre OEM mogą wymagać specyficznych testów wykraczających poza standardowe normy ISO/DIN.",
+          "original_claim": {
+            "claim": "Olej ISO VG 32 od dużego koncernu ma te same właściwości smarne i pakiety dodatków AW/EP co ten z nalepką OEM.",
+            "type": "technical",
+            "search_query": "specyfikacja olej ISO VG 32 dodatki AW EP porównanie z OEM",
+            "context": "parametry techniczne"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "10,000 - 150,000 PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Kwota 64 tys. PLN jest wysoce prawdopodobna w przypadku awarii dużych pomp przemysłowych, wielostopniowych pomp procesowych lub specjalistycznych pomp ciepła dużej mocy, gdzie same części zamienne mogą kosztować dziesiątki tysięcy złotych.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "awarii pompy za 64 tys. PLN.",
+            "type": "price",
+            "search_query": "koszt wymiany pompy hydraulicznej w maszynie przemysłowej cena",
+            "context": "koszt naprawy"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "10,000 - 40,000 PLN/rok",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Marże OEM na płynach eksploatacyjnych (oleje hydrauliczne, chłodziwa) wynoszą zazwyczaj od 50% do 200% powyżej cen rynkowych. Przy średnim zużyciu w zakładzie posiadającym kilkanaście maszyn, kwota 14 tys. PLN rocznie jest wartością konserwatywną i łatwą do osiągnięcia poprzez optymalizację zakupów.",
+          "correction_hint": "Wartość ta może być nawet wyższa w przypadku zakładów z dużym parkiem maszyn CNC lub wtryskarek, gdzie zużycie chłodziw i olejów jest znaczne.",
+          "original_claim": {
+            "claim": "Rocznie na samej marży OEM w średnim zakładzie ucieka 14 tys. PLN na zwykłych płynach eksploatacyjnych.",
+            "type": "roi",
+            "search_query": "oszczędności na zamiennikach olejów i smarów w zakładzie produkcyjnym",
+            "context": "oszczędności eksploatacyjne"
+          }
+        }
+      ],
+      "suspicious_claims": [],
+      "verified_claims": [
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "0.5M - 5.0M PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Kwota 1,42 mln PLN jest standardową ceną za średniej klasy maszynę przemysłową, taką jak centrum obróbcze CNC, wtryskarka lub zrobotyzowana linia pakująca.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "Kupujesz maszynę za 1.42M PLN.",
+            "type": "price",
+            "search_query": "średnia cena maszyny przemysłowej CNC wtryskarka 1.42 mln PLN",
+            "context": "cena maszyny"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "35-60 PLN (zamiennik) vs 120-180 PLN (OEM/ASO)",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Różnica w cenie między olejem w opakowaniu producenta samochodu (OEM) w autoryzowanym serwisie a tym samym olejem od producenta bazowego (np. Shell, Castrol) często wynosi 300-400%.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "Płacisz 158 zł za litr. Ten sam produkt bez logotypu producenta kosztuje 44 zł.",
+            "type": "price",
+            "search_query": "cena oleju hydraulicznego OEM vs zamiennik 158 zł 44 zł",
+            "context": "cena oleju"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "Zgodność z normami DIN 51524 cz. 2/3, ISO 11158",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Większość olejów OEM to produkty typu 'private label' produkowane przez duże koncerny petrochemiczne, które bazują na tych samych pakietach dodatków (np. Lubrizol, Afton) i spełniają identyczne normy przemysłowe.",
+          "correction_hint": "Warto zweryfikować konkretne aprobaty (np. Bosch Rexroth RDE 90235), ponieważ niektóre OEM mogą wymagać specyficznych testów wykraczających poza standardowe normy ISO/DIN.",
+          "original_claim": {
+            "claim": "Olej ISO VG 32 od dużego koncernu ma te same właściwości smarne i pakiety dodatków AW/EP co ten z nalepką OEM.",
+            "type": "technical",
+            "search_query": "specyfikacja olej ISO VG 32 dodatki AW EP porównanie z OEM",
+            "context": "parametry techniczne"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "medium",
+          "real_range": "10,000 - 150,000 PLN",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Kwota 64 tys. PLN jest wysoce prawdopodobna w przypadku awarii dużych pomp przemysłowych, wielostopniowych pomp procesowych lub specjalistycznych pomp ciepła dużej mocy, gdzie same części zamienne mogą kosztować dziesiątki tysięcy złotych.",
+          "correction_hint": null,
+          "original_claim": {
+            "claim": "awarii pompy za 64 tys. PLN.",
+            "type": "price",
+            "search_query": "koszt wymiany pompy hydraulicznej w maszynie przemysłowej cena",
+            "context": "koszt naprawy"
+          }
+        },
+        {
+          "is_realistic": true,
+          "confidence": "high",
+          "real_range": "10,000 - 40,000 PLN/rok",
+          "verdict": "REALISTYCZNE",
+          "explanation": "Marże OEM na płynach eksploatacyjnych (oleje hydrauliczne, chłodziwa) wynoszą zazwyczaj od 50% do 200% powyżej cen rynkowych. Przy średnim zużyciu w zakładzie posiadającym kilkanaście maszyn, kwota 14 tys. PLN rocznie jest wartością konserwatywną i łatwą do osiągnięcia poprzez optymalizację zakupów.",
+          "correction_hint": "Wartość ta może być nawet wyższa w przypadku zakładów z dużym parkiem maszyn CNC lub wtryskarek, gdzie zużycie chłodziw i olejów jest znaczne.",
+          "original_claim": {
+            "claim": "Rocznie na samej marży OEM w średnim zakładzie ucieka 14 tys. PLN na zwykłych płynach eksploatacyjnych.",
+            "type": "roi",
+            "search_query": "oszczędności na zamiennikach olejów i smarów w zakładzie produkcyjnym",
+            "context": "oszczędności eksploatacyjne"
+          }
+        }
+      ],
+      "summary": "✅ Wszystkie twierdzenia (5) są realistyczne"
+    }
+  }
+]

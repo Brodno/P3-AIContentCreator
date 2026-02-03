@@ -1,0 +1,73 @@
+[
+  {
+    "iteration": 1,
+    "score": 79,
+    "post_content": "Placisz 400 PLN za litr oleju, ktory w hurtowni kosztuje 18 PLN?\n\nGratuluje. Wlasnie sfinansowales nowy leasing handlowca Twojego dostawcy maszyn.\n\nWidze to przy kazdym audycie maszyn za 2 miliony zlotych. Producent nakleja swoja kolorowa etykiete na standardowy kanister i straszy utrata gwarancji, jesli wlejesz cokolwiek innego. To najstarszy trik w branzy przemyslowej.\n\nInzynierski fakt: Twoja maszyna nie potrafi czytac logo na opakowaniu.\n\nOna reaguje na lepkosc, dodatki uszlachetniajace i klase czystosci wedlug normy ISO 4406. Jesli uklad hydrauliczny wymaga oleju klasy ISO VG 46, to markowy zamiennik o identycznych parametrach wykona te sama robote. Czesto nawet lepiej, bo kupujesz swieza partie z biezacej produkcji, a nie lezak magazynowy, ktory czekal dwa lata na Twoje zamowienie.\n\nPrzebitka cenowa na tzw. oryginalach siega czesto 1000 procent marzy. To czysty zysk wyciagniety z Twojej kieszeni pod plaszczykiem bezpieczenstwa.\n\nJak nie dac sie naciagnac?\n\n1. Otworz Karte Charakterystyki (SDS) oryginalnego oleju.\n2. Znajdz sekcje z parametrami fizykochemicznymi i numerem CAS.\n3. Porownaj to z normami DIN 51524.\n4. Kup ten sam sklad u sprawdzonego dystrybutora srodkow smarnych.\n\nSerwisant moze straszyc, ale fizyka i normy ISO sa po Twojej stronie. Maszyna ma pracowac, a nie sluzyc jako pretekst do doplacania do logotypu.\n\nIle razy doplaciles za naklejke na kanistrze, bo serwis twierdzil, ze tylko ich olej jest magiczny?\n\n#produkcja #utrzymanieruchu #przemysl #AgencjaOP\n\nPROMPT GRAFICZNY (Nano Banana Pro):\nCinematic close-up shot of an industrial oil drum in a dark factory. On the drum, there is a glowing, expensive-looking gold sticker with a fake luxury logo, but the oil leaking from the spout is simple, golden liquid. High contrast, technical lighting, 8k resolution, industrial atmosphere.",
+    "evaluation": {
+      "breakdown": {
+        "hook": 28,
+        "logic_math": 10,
+        "eeat": 18,
+        "visual_clean": 15,
+        "cta": 8
+      },
+      "total_score": 79,
+      "logic_errors": [
+        "Błąd matematyczny: marża nie może wynosić 1000% (marża maksymalna to 100%, powyżej to narzut)",
+        "Błąd merytoryczny: parametrów fizykochemicznych szuka się w TDS (Technical Data Sheet), a nie w SDS (Safety Data Sheet), która służy do BHP",
+        "Cena 400 PLN za litr oleju hydraulicznego VG 46 jest nierealna rynkowo nawet przy ekstremalnych narzutach OEM (zazwyczaj to 60-120 PLN przy cenie rynkowej 12-15 PLN)"
+      ],
+      "format_errors": [
+        "Całkowity brak polskich znaków diakrytycznych (ą, ę, ś, ł, itd.) dyskwalifikuje tekst redakcyjnie"
+      ],
+      "feedback": "Technicznie brzmisz jak inżynier, ale matematycznie i redakcyjnie leżysz. Mylenie marży z narzutem to kompromitacja w biznesie, a brak polskich znaków sprawia, że post wygląda jak spam od bota z Indii. Popraw terminologię dokumentacji (TDS vs SDS).",
+      "strengths": "Bardzo silny, agresywny hook finansowy. Dobre operowanie konkretnymi normami (ISO 4406, DIN 51524), co buduje autorytet techniczny. Brak zakazanych gwiazdek w formatowaniu."
+    }
+  },
+  {
+    "iteration": 2,
+    "score": 94,
+    "post_content": "Płacisz 80 PLN za litr oleju, który w hurtowni kosztuje 15 PLN?\n\nGratuluję. Właśnie sfinansowałeś nowy leasing handlowca Twojego dostawcy maszyn.\n\nWidzę to przy każdym audycie parku maszynowego. Producent nakleja swoją kolorową etykietę na standardowy kanister i straszy utratą gwarancji, jeśli wlejesz cokolwiek innego. To najstarszy trik w branży przemysłowej.\n\nInżynierski fakt: Twoja maszyna nie potrafi czytać logo na opakowaniu.\n\nOna reaguje na lepkość, pakiet dodatków uszlachetniających i klasę czystości według normy ISO 4406. Jeśli układ hydrauliczny wymaga oleju klasy ISO VG 46, to wysokiej klasy zamiennik o identycznych parametrach wykona tę samą robotę. Często nawet lepiej, bo kupujesz świeżą partię z bieżącej produkcji, a nie leżak magazynowy, który czekał dwa lata na Twoje zamówienie.\n\nNarzut na tak zwanych oryginałach sięga często kilkuset procent. To czysty zysk wyciągnięty z Twojej kieszeni pod płaszczykiem bezpieczeństwa.\n\nJak nie dać się naciągnąć?\n\n1. Otwórz Kartę Techniczną (TDS) oryginalnego oleju.\n2. Znajdź sekcję z parametrami fizykochemicznymi (lepkość kinematyczna w 40°C, wskaźnik lepkości, temperatura płynięcia).\n3. Porównaj te dane z normami DIN 51524 (część 2 lub 3).\n4. Kup produkt o identycznym składzie u sprawdzonego dystrybutora środków smarnych.\n\nSerwisant może straszyć, ale fizyka i normy ISO są po Twojej stronie. Maszyna ma pracować, a nie służyć jako pretekst do dopłacania za logotyp na plastikowym baniaku.\n\nIle razy dopłaciłeś za naklejkę na kanistrze, bo serwis twierdził, że tylko ich olej jest magiczny?\n\n#produkcja #utrzymanieruchu #przemysl #AgencjaOP\n\nPROMPT GRAFICZNY (Nano Banana Pro):\nCinematic close-up shot of an industrial oil drum in a dark factory. On the drum, there is a glowing, expensive-looking gold sticker with a fake luxury logo, but the oil leaking from the spout is simple, golden liquid. High contrast, technical lighting, 8k resolution, industrial atmosphere.",
+    "evaluation": {
+      "breakdown": {
+        "hook": 28,
+        "logic_math": 24,
+        "eeat": 19,
+        "visual_clean": 15,
+        "cta": 8
+      },
+      "total_score": 94,
+      "logic_errors": [
+        "Brak"
+      ],
+      "format_errors": [
+        "Brak"
+      ],
+      "feedback": "To jeden z nielicznych tekstów, w którym marketing nie wygrał z fizyką płynów. Prawidłowe rozróżnienie TDS od MSDS w kontekście szukania parametrów fizykochemicznych to rzadkość, którą jako inżynier doceniam. Ceny 15/80 są rynkowo uzasadnione dla olejów hydraulicznych klasy premium vs OEM. Brak formatowania gwiazdkami sprawia, że tekst jest czysty i profesjonalny.",
+      "strengths": "Zastosowanie konkretnych norm technicznych (ISO 4406, DIN 51524), merytoryczne podejście do lepkości kinematycznej i bezbłędne zachowanie czystości formatowania."
+    }
+  },
+  {
+    "iteration": 3,
+    "score": 96,
+    "post_content": "Płacisz 80 PLN za litr oleju, który w hurtowni kosztuje 15 PLN?\n\nGratuluję. Właśnie sfinansowałeś nowy leasing handlowca Twojego dostawcy maszyn.\n\nWidzę to przy każdym audycie parku maszynowego. Producent nakleja swoją kolorową etykietę na standardowy kanister i straszy utratą gwarancji, jeśli wlejesz cokolwiek innego. To najstarszy trik w branży przemysłowej.\n\nInżynierski fakt: Twoja maszyna nie potrafi czytać logo na opakowaniu.\n\nOna reaguje na lepkość, pakiet dodatków uszlachetniających i klasę czystości według normy ISO 4406. Jeśli układ hydrauliczny wymaga oleju klasy ISO VG 46, to wysokiej klasy zamiennik o identycznych parametrach wykona tę samą robotę. Często nawet lepiej, bo kupujesz świeżą partię z bieżącej produkcji, a nie leżak magazynowy, który czekał dwa lata na Twoje zamówienie.\n\nNarzut na tak zwanych oryginałach przekracza często 400 procent. To czysty zysk wyciągnięty z Twojej kieszeni pod płaszczykiem bezpieczeństwa.\n\nJak nie dać się naciągnąć?\n\n1. Otwórz Kartę Techniczną (TDS) oryginalnego oleju.\n2. Znajdź sekcję z parametrami fizykochemicznymi (lepkość kinematyczna w 40 stopniach Celsjusza, wskaźnik lepkości, temperatura płynięcia).\n3. Porównaj te dane z normami DIN 51524 (część 2 HLP lub 3 HVLP).\n4. Kup produkt o identycznej specyfikacji u wyspecjalizowanego dystrybutora środków smarnych.\n\nSerwisant może straszyć, ale fizyka i normy ISO są po Twojej stronie. Maszyna ma pracować, a nie służyć jako pretekst do dopłacania za logotyp na plastikowym baniaku.\n\nIle razy dopłaciłeś za naklejkę na kanistrze, bo serwis twierdził, że tylko ich olej jest magiczny?\n\n#produkcja #utrzymanieruchu #przemysl #AgencjaOP\n\nPROMPT GRAFICZNY (Nano Banana Pro):\nCinematic close-up shot of an industrial oil drum in a dark factory. On the drum, there is a glowing, expensive-looking gold sticker with a fake luxury logo, but the oil leaking from the spout is simple, golden liquid. High contrast, technical lighting, 8k resolution, industrial atmosphere.",
+    "evaluation": {
+      "breakdown": {
+        "hook": 28,
+        "logic_math": 24,
+        "eeat": 20,
+        "visual_clean": 15,
+        "cta": 9
+      },
+      "total_score": 96,
+      "logic_errors": [
+        "Brak"
+      ],
+      "format_errors": [
+        "Brak"
+      ],
+      "feedback": "Rzadki przypadek, w którym tekst nie obraża inteligencji inżyniera. Prawidłowe odwołanie do TDS zamiast MSDS w kontekście parametrów fizykochemicznych to duży plus. Wyliczenie narzutu (433 procent przy podanych kwotach) zgadza się z tezą o przekroczeniu 400 procent. Brak gwiazdek i pogrubień sprawia, że tekst jest surowy i profesjonalny, jak dokumentacja techniczna.",
+      "strengths": "Precyzyjne przywołanie norm przemysłowych (DIN 51524, ISO 4406) oraz parametrów (lepkość kinematyczna, wskaźnik lepkości), które budują realny autorytet techniczny. Bardzo mocny, finansowy hook."
+    }
+  }
+]

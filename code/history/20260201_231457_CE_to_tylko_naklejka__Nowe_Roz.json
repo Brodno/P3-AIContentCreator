@@ -1,0 +1,17 @@
+[
+  {
+    "iteration": 1,
+    "score": 100,
+    "post_content": "Kupno maszyny z naklejką CE to dopiero połowa drogi, a nie gwarancja spokoju podczas kontroli PIP. Dla wielu właścicieli zakładów ten mały symbol to tarcza, która w rzeczywistości okazuje się cienką kartką papieru. W mojej praktyce inżynierskiej wielokrotnie spotykałem urządzenia za siedmiocyfrowe kwoty, które nie spełniały podstawowych norm bezpieczeństwa mimo kompletu dokumentów od dostawcy.\n\nNiedawno audytowałem linię produkcyjną, gdzie producent dumnie wystawił Deklarację Zgodności, ale całkowicie pominął rzetelną ocenę ryzyka dla kluczowych węzłów. System ryglowania osłon został zaprojektowany tak niefortunnie, że operatorzy mogli go obejść bez użycia narzędzi, co jest niedopuszczalne. W razie wypadku prokurator nie patrzy na naklejkę, tylko sprawdza, czy maszyna realnie chroniła pracownika zgodnie z wiedzą techniczną. Jako właściciel zakładu bierzesz na siebie pełną odpowiedzialność za sprzęt, który dopuszczasz do ruchu, bez względu na zapewnienia handlowca.\n\nNadchodzące Rozporządzenie Maszynowe 2023/1230, które w pełni zastąpi Dyrektywę 2006/42/WE w styczniu 2027 roku, drastycznie podnosi poprzeczkę dla wszystkich producentów i użytkowników. Nowe przepisy kładą ogromny nacisk na cyberbezpieczeństwo systemów sterowania oraz maszyny wykorzystujące algorytmy sztucznej inteligencji. Już teraz należy weryfikować, czy układy bezpieczeństwa spełniają normy ISO 13849-1 i posiadają odpowiedni poziom zapewnienia bezpieczeństwa (PL). Ignorowanie tych zmian przy dzisiejszych inwestycjach to ryzyko posiadania parku maszynowego, który za trzy lata będzie prawnym i technicznym obciążeniem.\n\nJak uniknąć kosztownych błędów przy zakupie nowej maszyny za 1-2 miliony złotych?\n- Weryfikuj dokumentację techniczną i ocenę ryzyka według ISO 12100 jeszcze przed wpłaceniem ostatniej raty.\n- Sprawdzaj, czy deklarowane poziomy Performance Level (PL) faktycznie odpowiadają fizycznym zagrożeniom na hali.\n- Angażuj niezależnego inżyniera do audytu przedpłatowego, aby wykryć błędy projektowe, zanim maszyna wyjedzie od producenta.\n- Dostosuj swoje procedury zakupowe do wymagań Rozporządzenia 2023/1230, aby uniknąć modernizacji sprzętu tuż po jego zakupie.\n\nPlanujesz zakup nowej maszyny i chcesz mieć pewność, że kupujesz bezpieczne narzędzie pracy, a nie problem prawny? Pomagam właścicielom firm produkcyjnych rzetelnie ocenić stan techniczny urządzeń przed ich odbiorem. Napisz do mnie wiadomość prywatną, aby omówić audyt Twojej kolejnej inwestycji.\n\n#bezpieczenstwomaszyn #przemysl #inzynieria #audyttechniczny #produkcja\n\nPrompt graficzny:\nProfessional engineering photography, close-up of a silver CE nameplate on a heavy industrial machine, shallow depth of field, realistic textures of brushed steel, factory background with blurred safety fences, natural workshop lighting, high resolution, industrial aesthetic.",
+    "evaluation": {
+      "breakdown": {
+        "structure": 30,
+        "logic_math": 30,
+        "visual_clean": 20,
+        "hook_cta": 20
+      },
+      "total_score": 100,
+      "feedback": "Tekst jest wzorcowy pod kątem redakcyjnym. Uniknięto błędu 'drabiny' (szatkowania tekstu na pojedyncze zdania), zachowując konkretne akapity o odpowiedniej długości. Merytoryka jest na wysokim poziomie – prawidłowo przywołano numery norm (ISO 12100, ISO 13849-1) oraz nadchodzące Rozporządzenie Maszynowe 2023/1230. Brak zbędnych ozdobników i gwiazdek poprawia profesjonalny odbiór. CTA jest jasne i osadzone w kontekście biznesowym."
+    }
+  }
+]
