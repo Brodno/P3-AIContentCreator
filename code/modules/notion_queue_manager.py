@@ -26,8 +26,12 @@ class NotionQueueManager:
         """
         # Get credentials from Streamlit secrets or env
         if STREAMLIT_AVAILABLE and hasattr(st, 'secrets'):
-            self.api_key = st.secrets.get('NOTION_API_KEY', api_key)
-            self.database_id = st.secrets.get('NOTION_DATABASE_ID', database_id)
+            try:
+                self.api_key = st.secrets['NOTION_API_KEY']
+                self.database_id = st.secrets['NOTION_DATABASE_ID']
+            except KeyError:
+                self.api_key = api_key or os.getenv('NOTION_API_KEY')
+                self.database_id = database_id or os.getenv('NOTION_DATABASE_ID')
         else:
             self.api_key = api_key or os.getenv('NOTION_API_KEY')
             self.database_id = database_id or os.getenv('NOTION_DATABASE_ID')
