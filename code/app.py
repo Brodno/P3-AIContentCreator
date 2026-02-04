@@ -18,7 +18,7 @@ from modules.improver import improve_post
 from modules.fact_checker import fact_check_post
 from modules.history_checker import parse_index, get_recent_topics
 from modules.image_prompt_generator import generate_image_prompt, generate_multiple_variants
-from modules.queue_manager import get_queue_manager
+from modules.notion_queue_manager import get_queue_manager
 from content_loop import web_search
 
 # Konfiguracja strony
