@@ -56,8 +56,11 @@ code/generated_images/
 code/generated_posts/
 MARKETING/05_PUBLIKACJE/generated/
 
-# History files (optional - comment out if you want to track)
-# code/history/*.json
+# History files - prywatna treść
+code/history/
+code/data/
+code/MARKETING/
+ROADMAP.md
 
 # Temporary files
 *.tmp

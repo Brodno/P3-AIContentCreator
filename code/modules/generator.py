@@ -50,7 +50,8 @@ ZASADA:
     prompt = format_prompt(
         prompt_template,
         topic=topic,
-        avoid_instruction=avoid_instruction
+        avoid_instruction=avoid_instruction,
+        story_brief="" # Fix: adding missing story_brief
     )
 
     # ===================================

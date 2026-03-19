@@ -18,8 +18,7 @@ from modules.improver import improve_post
 from modules.fact_checker import fact_check_post
 from modules.history_checker import parse_index, get_recent_topics
 from modules.image_prompt_generator import generate_image_prompt, generate_multiple_variants
-from modules.image_generator import generate_image
-from modules.notion_queue_manager import get_queue_manager
+from modules.queue_manager import get_queue_manager
 from content_loop import web_search
 
 # Konfiguracja strony
@@ -139,49 +138,22 @@ queue_manager = get_queue_manager()
 # Funkcje tematów
 def find_topic_files():
     """Znajduje wszystkie pliki tematy*.md"""
-    # Get code directory more reliably
-    if __file__:
-        code_dir = os.path.dirname(os.path.abspath(__file__))
-    else:
-        code_dir = os.getcwd()
-
-    # Fallback to current directory if empty
-    if not code_dir:
-        code_dir = '.'
-
+    code_dir = os.path.dirname(__file__)
     topic_files = []
-
-    try:
-        for filename in os.listdir(code_dir):
-            if filename.startswith('tematy') and filename.endswith('.md'):
-                topic_files.append(os.path.join(code_dir, filename))
-    except Exception as e:
-        st.warning(f"⚠️ Nie można odczytać katalogu {code_dir}: {e}")
-        # Try current directory as last resort
-        try:
-            for filename in os.listdir('.'):
-                if filename.startswith('tematy') and filename.endswith('.md'):
-                    topic_files.append(filename)
-        except:
-            pass
-
+    for filename in os.listdir(code_dir):
+        if filename.startswith('tematy') and filename.endswith('.md'):
+            topic_files.append(os.path.join(code_dir, filename))
     return sorted(topic_files)
 
 def load_all_topics():
     """Wczytuje wszystkie tematy"""
     topic_files = find_topic_files()
-
-    if not topic_files:
-        st.error(f"❌ Nie znaleziono plików tematy*.md w katalogu: {os.getcwd()}")
-        st.info("💡 Upewnij się, że pliki tematy100.md, tematy200.md itp. są w folderze code/")
-        return []
-
     all_topics = []
     for filepath in topic_files:
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
-            for line in content.split('\n'):
+            for line in content.split('\\n'):
                 line = line.strip()
                 if line and line[0].isdigit() and '. ' in line:
                     topic = line.split('. ', 1)[1].strip()
@@ -193,7 +165,6 @@ def load_all_topics():
                         })
         except Exception as e:
             st.error(f"Błąd wczytywania {filepath}: {e}")
-
     return all_topics
 
 def get_used_topics():
@@ -572,188 +543,50 @@ with tab2:
 
 # TAB 3: Generowanie obrazów
 with tab3:
-    st.markdown("## 🎨 Image Studio — Gemini / Imagen 3")
+    st.markdown("## 🎨 Generuj prompt do obrazu")
 
-    # Inicjalizacja session state
-    if 'image_generated_path' not in st.session_state:
-        st.session_state.image_generated_path = None
-    if 'image_custom_prompt' not in st.session_state:
-        st.session_state.image_custom_prompt = ""
+    if st.session_state.generated_post:
+        result = st.session_state.generated_post
+        topic = st.session_state.current_topic
 
-    # --- Tryby ---
-    img_mode = st.radio(
-        "Tryb generowania:",
-        ["📝 Z aktywnego posta", "✍️ Własny prompt", "🏷️ Baner LinkedIn"],
-        horizontal=True
-    )
+        st.info(f"🎯 Temat: **{topic}**")
 
-    col_model, col_ratio = st.columns(2)
-    with col_model:
-        img_model = st.selectbox(
-            "Model:",
-            ["imagen3 (lepsza jakość)", "gemini_flash (szybszy)"],
-            index=0
-        )
-        model_key = "imagen3" if "imagen3" in img_model else "gemini_flash"
-
-    with col_ratio:
-        ratio_options = {"1:1 (kwadrat)" : "1:1", "16:9 (landscape)": "16:9",
-                         "9:16 (pionowy)": "9:16", "4:3": "4:3"}
-        ratio_label = st.selectbox("Format:", list(ratio_options.keys()), index=1)
-        aspect_ratio = ratio_options[ratio_label]
-
-    st.markdown("---")
-
-    # --- Tryb: Z aktywnego posta ---
-    if img_mode == "📝 Z aktywnego posta":
-        if st.session_state.generated_post:
-            result = st.session_state.generated_post
-            topic = st.session_state.current_topic
-
-            st.info(f"🎯 Temat: **{topic}**")
-
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                if st.button("📷 Close-up", use_container_width=True, key="img_closeup_tab"):
-                    st.session_state.image_variant = "closeup"
-            with col2:
-                if st.button("📷 Medium Shot", use_container_width=True, key="img_medium_tab"):
-                    st.session_state.image_variant = "medium"
-            with col3:
-                if st.button("📷 Wide Angle", use_container_width=True, key="img_wide_tab"):
-                    st.session_state.image_variant = "wide"
-
-            if 'image_variant' not in st.session_state:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            if st.button("📷 Close-up", use_container_width=True, key="img_closeup_tab"):
+                st.session_state.image_variant = "closeup"
+        with col2:
+            if st.button("📷 Medium Shot", use_container_width=True, key="img_medium_tab"):
                 st.session_state.image_variant = "medium"
+        with col3:
+            if st.button("📷 Wide Angle", use_container_width=True, key="img_wide_tab"):
+                st.session_state.image_variant = "wide"
 
-            variants = generate_multiple_variants(result['post'], topic, count=3)
-            variant_map = {"closeup": 0, "medium": 1, "wide": 2}
-            selected_variant = variants[variant_map[st.session_state.image_variant]]
+        if 'image_variant' not in st.session_state:
+            st.session_state.image_variant = "medium"
 
-            prompt_for_gen = selected_variant['prompt']
+        variants = generate_multiple_variants(result['post'], topic, count=3)
+        variant_map = {"closeup": 0, "medium": 1, "wide": 2}
+        selected_variant = variants[variant_map[st.session_state.image_variant]]
 
-            st.text_area("Prompt (edytowalny):", value=prompt_for_gen, height=200,
-                         key="post_image_prompt_edit")
+        st.info(f"🎯 Wybrany wariant: **{selected_variant['variant_name']}**")
 
-            if st.button("🎨 GENERUJ OBRAZ", type="primary", use_container_width=True,
-                         key="gen_from_post"):
-                with st.spinner("⏳ Generowanie obrazu (10-30 sek)..."):
-                    gen_result = generate_image(
-                        prompt=st.session_state.post_image_prompt_edit,
-                        filename=f"post_{topic[:30].replace(' ', '_')}",
-                        aspect_ratio=aspect_ratio,
-                        prefer_model=model_key
-                    )
-                if gen_result["success"]:
-                    st.session_state.image_generated_path = gen_result["filepath"]
-                    st.success(f"✅ Wygenerowano! Model: {gen_result['model']}")
-                else:
-                    st.error(f"❌ Błąd: {gen_result['error']}")
-        else:
-            st.warning("⚠️ Najpierw wygeneruj post w zakładce 'Nowy Post'")
-
-    # --- Tryb: Własny prompt ---
-    elif img_mode == "✍️ Własny prompt":
-        custom_prompt = st.text_area(
-            "Wpisz własny prompt po angielsku:",
-            placeholder="Industrial factory scene, CNC machine, engineer inspecting...",
-            height=200,
-            key="custom_img_prompt"
+        st.text_area(
+            "Prompt do Imagen 4 / DALL-E 3:",
+            value=selected_variant['prompt'],
+            height=300,
+            key="image_prompt_tab"
         )
-        custom_filename = st.text_input("Nazwa pliku (bez rozszerzenia):", value="custom_image")
 
-        if st.button("🎨 GENERUJ OBRAZ", type="primary", use_container_width=True,
-                     key="gen_custom"):
-            if not custom_prompt.strip():
-                st.warning("⚠️ Wpisz prompt!")
-            else:
-                with st.spinner("⏳ Generowanie obrazu (10-30 sek)..."):
-                    gen_result = generate_image(
-                        prompt=custom_prompt,
-                        filename=custom_filename or "custom_image",
-                        aspect_ratio=aspect_ratio,
-                        prefer_model=model_key
-                    )
-                if gen_result["success"]:
-                    st.session_state.image_generated_path = gen_result["filepath"]
-                    st.success(f"✅ Wygenerowano! Model: {gen_result['model']}")
-                else:
-                    st.error(f"❌ Błąd: {gen_result['error']}")
-
-    # --- Tryb: Baner LinkedIn ---
-    elif img_mode == "🏷️ Baner LinkedIn":
-        st.markdown("**Generuj baner LinkedIn dla AgencjaOP**")
-
-        banner_variant = st.selectbox(
-            "Styl banera:",
-            ["dark — Ciemny/Industrial (rekomendowany)", "photo — Zdjęcie tła", "light — Jasny/Clean"],
-            index=0
-        )
-        banner_key = banner_variant.split(" — ")[0]
-
-        banner_prompts = {
-            "dark": """Professional LinkedIn banner, horizontal panoramic format 16:9.
-Dark industrial background: steel factory floor, dramatic lighting.
-Silhouette of large industrial machinery in background.
-Bold white text 'AgencjaOP | Audyt Maszyn Przemysłowych'.
-Tagline: 'Wiem gdzie maszyna nie dowiezie. Zanim ją kupisz.'
-Colors: Deep navy #0d1117, electric blue, orange #ff7f0e.
-Corporate-industrial, premium quality. No people.""",
-            "photo": """LinkedIn banner with authentic industrial photography background.
-Wide panoramic format 16:9.
-Real factory floor, production line with machines, slightly blurred/darkened.
-Dark overlay gradient on left side.
-White text: 'Łukasz Rymkowski | AgencjaOP'
-Subtitle: 'Audytor Maszyn Przemysłowych'
-Orange accent line. Bottom right: 'audytmaszyn.pl'
-Raw, authentic industrial feel. Professional.""",
-            "light": """Clean professional LinkedIn banner, horizontal 16:9 format.
-Light grey background with subtle industrial texture.
-Bold navy blue 'AgencjaOP' text on left.
-Stats boxes: '10 lat doświadczenia | 500k-2M PLN | Audyt w 10 dni'
-Bottom orange strip: 'www.audytmaszyn.pl'
-Navy, orange, light grey palette. Minimalist B2B style.""",
-        }
-
-        st.text_area("Prompt banera (edytowalny):", value=banner_prompts[banner_key],
-                     height=180, key="banner_prompt_edit")
-
-        if st.button("🏷️ GENERUJ BANER", type="primary", use_container_width=True,
-                     key="gen_banner"):
-            with st.spinner("⏳ Generowanie banera (10-30 sek)..."):
-                gen_result = generate_image(
-                    prompt=st.session_state.banner_prompt_edit,
-                    filename=f"baner_linkedin_{banner_key}",
-                    aspect_ratio="16:9",
-                    prefer_model=model_key
-                )
-            if gen_result["success"]:
-                st.session_state.image_generated_path = gen_result["filepath"]
-                st.success(f"✅ Baner wygenerowany! Model: {gen_result['model']}")
-                st.info("📋 LinkedIn: Profil → ołówek na tle → załaduj plik → przytnij")
-            else:
-                st.error(f"❌ Błąd: {gen_result['error']}")
-
-    # --- Podgląd wygenerowanego obrazu ---
-    if st.session_state.image_generated_path:
-        st.markdown("---")
-        st.markdown("### 🖼️ Wygenerowany obraz")
-        try:
-            st.image(st.session_state.image_generated_path, use_container_width=True)
-            st.caption(f"📁 Plik: `{st.session_state.image_generated_path}`")
-
-            with open(st.session_state.image_generated_path, "rb") as f:
-                img_bytes = f.read()
-            filename_only = Path(st.session_state.image_generated_path).name
-            st.download_button(
-                label="⬇️ Pobierz PNG",
-                data=img_bytes,
-                file_name=filename_only,
-                mime="image/png",
-                use_container_width=True
-            )
-        except Exception as e:
-            st.error(f"Błąd podglądu: {e}")
+        st.markdown("""
+        **Jak użyć:**
+        1. Skopiuj prompt (Ctrl+A, Ctrl+C)
+        2. Wejdź na generator obrazów (Imagen, DALL-E, etc.)
+        3. Wklej i wygeneruj
+        4. Pobierz obraz i dodaj do posta LinkedIn
+        """)
+    else:
+        st.warning("⚠️ Najpierw wygeneruj post w zakładce 'Nowy Post'")
 
 # Footer
 st.markdown("---")

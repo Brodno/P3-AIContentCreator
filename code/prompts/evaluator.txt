@@ -115,6 +115,41 @@ Sprawdź czy post nie kopiuje przykładów:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+VIRAL DNA CHECK (potencjał wiralowy — ważniejszy niż text score):
+
+Tekst może dostać 95/100 i zebrać 3 000 wyświetleń.
+Post z pełnym Viral DNA zbiera 30 000-60 000.
+Oceniasz POTENCJAŁ, nie tylko jakość pisania.
+
+Odpowiedz TAK lub NIE na każde pytanie:
+
+1. PLN_W_HOOKU:
+   Czy w PIERWSZYCH 2 LINIJKACH jest konkretna kwota w PLN?
+   TAK = "180 000 PLN", "1,2M PLN", "47 zł" — pojawia się w linii 1 lub 2
+   NIE = brak kwoty lub kwota dopiero w środku posta
+
+2. BOL_WLASCICIELA:
+   Czy ból dotyczy WŁAŚCICIELA / DECYDENTA (nie technika UR)?
+   TAK = właściciel traci kasę, ryzykuje prawnie, traci kontrolę nad firmą
+   NIE = problem serwisanta, technika UR — osoby która naprawia, nie płaci
+
+3. KONTRAST:
+   Czy jest absurdalny kontrast lub zaskakujące zestawienie?
+   TAK = "blaszka za 47 zł vs maszyna za milion", "folder: 125 szt/min, hala: 88"
+   NIE = płaskie wyliczenie ryzyk bez dramatycznego zestawienia
+
+4. TO_O_MNIE:
+   Czy pytanie CTA sprawia, że właściciel myśli "to moja sytuacja"?
+   TAK = "Ile u Was kosztuje godzina przestoju?", "Macie zapis o karach w umowie?"
+   NIE = "Co o tym myślicie?", "Zgadzacie się?" — ogólne bez osobistego zaangażowania
+
+5. UNIKALNY_KAT:
+   Czy kąt narracji jest nieoczywisty (nie kolejny post "uważaj na X")?
+   TAK = konkretna klauzula z numerem, nieoczekiwany mechanizm, historia która zaskakuje
+   NIE = podręcznikowe "10 błędów przy zakupie maszyny", lista ryzyk bez twist
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 POST DO OCENY:
 ---
 {draft}
@@ -131,6 +166,15 @@ Oceń post i zwróć JSON:
     "cta": <0-10>
   }},
   "total_score": <suma>,
+  "viral_dna": {{
+    "pln_w_hooku": <true/false>,
+    "bol_wlasciciela": <true/false>,
+    "kontrast": <true/false>,
+    "to_o_mnie": <true/false>,
+    "unikalny_kat": <true/false>,
+    "score": <0-5>,
+    "co_poprawic": ["konkretny opis co brakuje i jak naprawić — dla każdego false"]
+  }},
   "logic_check": {{
     "passed": <true/false>,
     "errors": ["błąd 1", "błąd 2"]

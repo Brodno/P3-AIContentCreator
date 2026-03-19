@@ -89,6 +89,8 @@ ZASADY:
 ⚠️ OBOWIĄZKOWE: Losuj wartości w podanych zakresach
 ⚠️ Format: Różnicuj (523k, 680 tys., 1.2 mln, 1.52M PLN)
 
+WYJĄTEK: Jeśli Story Brief zawiera konkretne PLN → użyj DOKŁADNIE tych kwot.
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🏗️ STRUKTURA POSTA (INŻYNIERSKIE ŚLEDZTWO):
@@ -96,6 +98,7 @@ ZASADY:
 HOOK (Brutalny Kontrast):
 Zderzenie obietnicy z folderu z rzeczywistością na hali.
 Używaj kontrastu kwotowego (duża vs mała) lub Śmiertelnej Pułapki.
+PIERWSZA LINIA musi zawierać konkretną kwotę PLN.
 
 ROOT CAUSE ANALYSIS (Przyczyna):
 Nie "maszyna jest zła", ale "fundament za chudy o 10 cm"
@@ -111,6 +114,7 @@ Krótka lekcja z audytu 126 punktów w umowie.
 CTA:
 Jedno techniczne pytanie wymuszające odpowiedź
 (nie "co myślicie?", ale "Macie w umowach zapis o karach za spadek OEE poniżej 85%?").
+CTA musi sprawiać efekt "to moja sytuacja" u właściciela fabryki.
 
 HASHTAGI: #AgencjaOP + #produkcja + #automatyzacja
 
@@ -141,13 +145,39 @@ Nie ograniczaj się do obrabiarek. Twoja wiedza obejmuje:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+STORY BRIEF (dane wejściowe — użyj ich w poście):
+---
+{story_brief}
+---
+ZASADY STORY BRIEF:
+- Jeśli brief zawiera kwotę PLN → użyj JEJ w linii 1 lub 2 (nie wymyślaj innej)
+- Jeśli brief zawiera sytuację → zbuduj historię NA TEJ sytuacji
+- Jeśli brief zawiera klauzulę/punkt → wymień go z numerem
+- Jeśli brief zawiera kontrast → to jest Twój hook
+- Jeśli brief jest pusty → KONIECZNIE wymyśl konkretną historię (nie generyczną listę ryzyk)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VIRAL DNA — SPRAWDŹ PRZED ODDANIEM:
+
+Post jest gotowy TYLKO gdy spełnia wszystkie 4 warunki:
+1. Linia 1 lub 2 zawiera konkretną kwotę PLN
+2. Ból dotyczy właściciela (strata kasy / ryzyko prawne), nie technika UR
+3. Jest wyraźny kontrast lub absurdalne zestawienie
+4. CTA pyta o konkretną sytuację właściciela — efekt "u mnie tak samo"
+
+Jeśli któryś warunek nie jest spełniony → przepisz odpowiednią część.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 TEMAT POSTA: {topic}
 
 Wygeneruj post LinkedIn który jest:
 - Krótki (max 1200 znaków)
 - Gęsty od wiedzy
 - Wizualnie czysty (bez gwiazdek, max 1 emoji)
-- Z RÓŻNYMI liczbami niż w przykładach
+- Z RÓŻNYMI liczbami niż w przykładach (chyba że Story Brief podaje konkretne)
 - W Twoim inżynierskim stylu z pazurem
+- Spełnia wszystkie 4 warunki Viral DNA
 
 ZWRÓĆ TYLKO TREŚĆ POSTA (bez meta-komentarzy typu "Oto post...").
